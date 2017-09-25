@@ -19,6 +19,7 @@ class CreateNewsFieldTable extends Migration
             $table->integer('news_id');
             $table->string('field_name');
             $table->text('value');
+            $table->timestamps();
         });
     }
     /**
