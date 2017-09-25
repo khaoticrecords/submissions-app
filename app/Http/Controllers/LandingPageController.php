@@ -9,44 +9,9 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
 
-class CreateNewsTable extends Migration
-{
-
-    public function up()
-    {
-        Schema::create('news', function (Blueprint $table){
-        $table->increments('id');
-        $table->string('imgUrl');
-        $table->string('altText');
-        $table->string('title');
-        $table->timestamps();
-    });
-    }
-    public function down()
-    {
-        Schema::drop('news');
-    }
-}class CreateNewsFieldTable extends Migration
-{
-
-    public function up()
-    {
-        Schema::create('news-fields', function (Blueprint $table){
-        $table->increments('id');
-        $table->integer('news_id');
-        $table->string('field_name');
-        $table->text('value');
-    });
-    }
-    public function down()
-    {
-        Schema::drop('news-fields');
-    }
-}
 
 class LandingPageController extends Controller
 {
-    //
     public function get_LandingPage(Request $request)
     {
 
