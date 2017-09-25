@@ -12,6 +12,14 @@ class LandingPageController extends Controller
 
 
         return view('welcome', [
+            'events' => [],
+
+            'featuredRelease' => (object) [
+                'name' => 'Grab The Summer',
+                'artist' => 'Chris Khaos',
+                'imgUrl' => url('storage/album-arts/grab-the-summer.jpg'),
+                'description' => "Here's a little bit of musical sunshine to brighten up your day. Chris Khaos' first release on Khaotic records. \"Grab The Summer\" is a beautiful deep tropical house song that will surely bring those summer vibes to your ear-holes.<br /><br />Available everywhere music is streamed or sold September 21!"
+            ],
             'newsCarouselItems' => [
                 (object)[
                     'imgUrl' => url('storage/album-arts/pablo.jpg'),

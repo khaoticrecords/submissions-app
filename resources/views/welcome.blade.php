@@ -42,3 +42,30 @@
         {{--</a>--}}
     </div>
 @endsection
+@push('feature-content')
+    <div class="col-md-6">
+        <div class="mu-about-left">
+            <img class="" src="{!! $featuredRelease->imgUrl !!}" alt="Khaotic Records Logo Square BW.">
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="mu-about-right">
+            <h2>Featured Release</h2>
+            <h4>{!! $featuredRelease->name !!} by {!! $featuredRelease->artist !!}</h4>
+            <p>{!! $featuredRelease->description !!}</p>
+        </div>
+    </div>
+@endpush
+
+@push('event-content')
+    <h2>Upcoming Events</h2>
+    @foreach($events as $event)
+        <div class="card">
+            <img src="{!! $event->imgUrl !!}" alt="{!! $event->imgAltText !!}" style="width:100%">
+            <div class="container">
+                <h4><b>{!! $event->name !!}</b></h4>
+                <p>{!! $event->start_datetime->toDayDateTimeString() !!} - {!! $event->start_datetime->toDayDateTimeString() !!}</p>
+            </div>
+        </div>
+    @endforeach
+@endpush
