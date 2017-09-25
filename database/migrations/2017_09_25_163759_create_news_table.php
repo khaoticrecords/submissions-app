@@ -6,13 +6,6 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateNewsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-class CreateNewsTable extends Migration
-{
 
     public function up()
     {
